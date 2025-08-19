@@ -1,15 +1,22 @@
 ---
 import "../styles/global.css";
+import "../styles/print.css";
 import "@fontsource-variable/roboto-mono";
 
 interface Props {
   title?: string;
   description?: string;
-  url?: string;
   image?: string;
 }
 
-const { title = "", description = "", url = "", image = "" } = Astro.props;
+const { 
+  title = "Professional CV - Digital Resume", 
+  description = "A modern, minimalist CV template built with Astro and TailwindCSS. Print-friendly design perfect for showcasing professional experience, skills, and achievements.", 
+  image = "/meta.png" 
+} = Astro.props;
+
+const siteUrl = Astro.site?.toString();
+const imageUrl = `${siteUrl}${image}`;
 ---
 
 <!doctype html>
@@ -17,8 +24,13 @@ const { title = "", description = "", url = "", image = "" } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+
+    <!-- Favicon Generated with https://favicon.io -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 
     <!-- Meta Tags Generated with https://metatags.io -->
     <!-- Primary Meta Tags -->
@@ -28,17 +40,17 @@ const { title = "", description = "", url = "", image = "" } = Astro.props;
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={url} />
+    <meta property="og:url" content={siteUrl} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={image} />
+    <meta property="og:image" content={imageUrl} />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={url} />
+    <meta property="twitter:url" content={siteUrl} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={image} />
+    <meta property="twitter:image" content={imageUrl} />
   </head>
   <body>
     <slot />

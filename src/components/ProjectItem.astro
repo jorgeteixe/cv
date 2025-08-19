@@ -1,0 +1,62 @@
+---
+interface Props {
+  project: {
+    name: string;
+    description: string;
+    highlights?: string[];
+    keywords: string[];
+    date?: string;
+    url?: string;
+    roles?: string[];
+    entity?: string;
+    type?: string;
+  };
+}
+
+const { project } = Astro.props;
+
+const formatDate = (dateString: string) => {
+  if (!dateString) return "";
+  const date = new Date(dateString);
+  return date.toLocaleDateString('en-US', { year: 'numeric', month: 'short' });
+};
+
+const formattedDate = project.date ? formatDate(project.date) : "";
+---
+
+<div class="mb-4">
+  <div class="flex justify-between items-start mb-2">
+    <h3 class="font-semibold text-base">
+      {project.url ? (
+        <a href={project.url} class="text-blue-600 hover:underline" target="_blank" rel="noopener">
+          {project.name}
+        </a>
+      ) : (
+        project.name
+      )}
+    </h3>
+    {formattedDate && (
+      <span class="text-xs text-gray-500 whitespace-nowrap ml-4">{formattedDate}</span>
+    )}
+  </div>
+  
+  <p class="text-sm text-gray-700 mb-2 leading-relaxed">
+    {project.description}
+  </p>
+  
+  {project.highlights && project.highlights.length > 0 && (
+    <ul class="text-sm text-gray-700 mb-2 list-disc list-inside space-y-1">
+      {project.highlights.map((highlight) => (
+        <li>{highlight}</li>
+      ))}
+    </ul>
+  )}
+  
+  <div class="flex flex-wrap gap-2">
+    {project.keywords.map((keyword) => (
+      <span class="px-2 py-1 bg-gray-100 text-xs rounded">
+        {keyword}
+      </span>
+    ))}
+  </div>
+</div>

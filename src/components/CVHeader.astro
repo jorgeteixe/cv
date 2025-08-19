@@ -1,0 +1,111 @@
+---
+interface Props {
+  basics: {
+    name: string;
+    label?: string;
+    image: string;
+    email?: string;
+    url?: string;
+    location: {
+      city: string;
+      region?: string;
+      countryCode: string;
+    };
+    profiles: Array<{
+      network: string;
+      username?: string;
+      url: string;
+    }>;
+  };
+}
+
+const { basics } = Astro.props;
+
+const countryFlags: { [key: string]: string } = {
+  ES: "🇪🇸",
+  US: "🇺🇸",
+  FR: "🇫🇷",
+  DE: "🇩🇪",
+  GB: "🇬🇧",
+  IT: "🇮🇹",
+  PT: "🇵🇹",
+  RO: "🇷🇴",
+};
+
+const countryNames: { [key: string]: string } = {
+  ES: "Spain",
+  US: "United States",
+  FR: "France",
+  DE: "Germany",
+  GB: "United Kingdom",
+  IT: "Italy",
+  PT: "Portugal",
+  RO: "Romania",
+};
+
+const flag = countryFlags[basics.location.countryCode] || "";
+const countryName =
+  countryNames[basics.location.countryCode] || basics.location.countryCode;
+const locationString = `${basics.location.region}, ${countryName} ${flag}`;
+
+const siteUrl = Astro.site?.toString();
+---
+
+<header class="mb-8 relative">
+  <!-- Digital CV link - top right corner, print only -->
+  <div class="print-only absolute top-0 right-0 text-xs text-gray-600">
+    Digital version: {siteUrl}
+  </div>
+
+  <div class="flex flex-col items-center text-center gap-6">
+    <img
+      src={basics.image}
+      alt={basics.name}
+      class="w-32 h-32 rounded-full object-cover border-2 border-gray-300"
+    />
+
+    <div class="flex-1">
+      <h1 class="text-3xl font-bold mb-2">{basics.name}</h1>
+      {basics.label && <p class="text-lg text-gray-500 mb-2">{basics.label}</p>}
+      <p class="text-lg text-gray-600 mb-4">{locationString}</p>
+
+      <div class="flex flex-wrap justify-center gap-4 text-sm">
+        {
+          basics.email && (
+            <a
+              href={`mailto:${basics.email}`}
+              class="text-blue-600 hover:underline"
+              data-email={basics.email}
+            >
+              Email
+            </a>
+          )
+        }
+        {
+          basics.profiles.map((profile) => (
+            <a
+              href={profile.url}
+              class="text-blue-600 hover:underline"
+              target="_blank"
+              rel="noopener"
+            >
+              {profile.network}
+            </a>
+          ))
+        }
+        {
+          basics.url && (
+            <a
+              href={basics.url}
+              class="text-blue-600 hover:underline"
+              target="_blank"
+              rel="noopener"
+            >
+              Website
+            </a>
+          )
+        }
+      </div>
+    </div>
+  </div>
+</header>

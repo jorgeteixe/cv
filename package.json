@@ -1,7 +1,7 @@
 {
-  "name": "",
+  "name": "curriculum-vitae-as-code",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -12,6 +12,7 @@
     "@fontsource-variable/roboto-mono": "^5.2.6",
     "@tailwindcss/vite": "^4.1.12",
     "astro": "^5.13.2",
-    "tailwindcss": "^4.1.12"
+    "tailwindcss": "^4.1.12",
+    "yaml": "^2.8.1"
   }
 }

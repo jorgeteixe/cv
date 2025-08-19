@@ -1,0 +1,49 @@
+---
+interface Props {
+  education: {
+    institution: string;
+    url?: string;
+    area: string;
+    studyType: string;
+    startDate: string;
+    endDate?: string;
+    score?: string;
+    courses?: string[];
+  };
+}
+
+const { education } = Astro.props;
+
+const formatDate = (dateString: string) => {
+  if (!dateString) return "";
+  const date = new Date(dateString);
+  return date.getFullYear().toString();
+};
+
+const period = education.endDate ? 
+  `${formatDate(education.startDate)} - ${formatDate(education.endDate)}` : 
+  `${formatDate(education.startDate)} - Present`;
+---
+
+<div class="mb-4">
+  <div class="flex justify-between items-start mb-1">
+    <div class="flex-1">
+      <h3 class="font-semibold text-base leading-tight">
+        {education.studyType}{education.area && ` in ${education.area}`}
+        {education.score && (
+          <span class="ml-2 text-xs text-gray-500 font-normal">({education.score})</span>
+        )}
+      </h3>
+      <p class="text-gray-600 text-sm">
+        {education.url ? (
+          <a href={education.url} class="text-blue-600 hover:underline" target="_blank" rel="noopener">
+            {education.institution}
+          </a>
+        ) : (
+          education.institution
+        )}
+      </p>
+    </div>
+    <span class="text-xs text-gray-500 whitespace-nowrap ml-4">{period}</span>
+  </div>
+</div>

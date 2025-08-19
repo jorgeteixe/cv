@@ -1,12 +1,78 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import CVHeader from "../components/CVHeader.astro";
+import CVSection from "../components/CVSection.astro";
+import ExperienceItem from "../components/ExperienceItem.astro";
+import EducationItem from "../components/EducationItem.astro";
+import SkillsGrid from "../components/SkillsGrid.astro";
+import ProjectItem from "../components/ProjectItem.astro";
+
+import { readFile } from "fs/promises";
+import { parse } from "yaml";
+import path from "path";
+
+const cvDataPath = path.join(process.cwd(), "src/data/cv.yaml");
+const cvDataContent = await readFile(cvDataPath, "utf-8");
+const cvData = parse(cvDataContent);
+
+// Generate dynamic title and description
+const pageTitle = `${cvData.basics.name}${cvData.basics.label ? ` - ${cvData.basics.label}` : " - CV"}`;
+
+const pageDescription = cvData.basics.summary
+  ? cvData.basics.summary.split("\n")[0] // First paragraph of summary
+  : `Professional CV of ${cvData.basics.name}${cvData.basics.label ? `, ${cvData.basics.label}` : ""}. View experience, skills, education, and projects.`;
 ---
 
-<Layout
-  title="Teixe's CV"
-  description="A brief overview of my professional journey and skills."
-  url="https://cv.teixe.es/"
-  image="https://cv.teixe.es/meta.png"
->
-  <p class="text-center text-2xl">Hello, world!</p>
+<Layout title={pageTitle} description={pageDescription} image="/meta.png">
+  <main class="max-w-4xl mx-auto px-6 py-8">
+    <CVHeader basics={cvData.basics} />
+
+    {
+      cvData.basics.summary && (
+        <CVSection title="Summary">
+          <p class="text-sm text-gray-700 leading-relaxed whitespace-pre-line">
+            {cvData.basics.summary}
+          </p>
+        </CVSection>
+      )
+    }
+
+    {
+      cvData.work && cvData.work.length > 0 && (
+        <CVSection title="Experience">
+          {cvData.work.map((work: any) => (
+            <ExperienceItem work={work} />
+          ))}
+        </CVSection>
+      )
+    }
+
+    {
+      cvData.education && cvData.education.length > 0 && (
+        <CVSection title="Education">
+          {cvData.education.map((education: any) => (
+            <EducationItem education={education} />
+          ))}
+        </CVSection>
+      )
+    }
+
+    {
+      cvData.skills && cvData.skills.length > 0 && (
+        <CVSection title="Skills">
+          <SkillsGrid skills={cvData.skills} />
+        </CVSection>
+      )
+    }
+
+    {
+      cvData.projects && cvData.projects.length > 0 && (
+        <CVSection title="Projects">
+          {cvData.projects.map((project: any) => (
+            <ProjectItem project={project} />
+          ))}
+        </CVSection>
+      )
+    }
+  </main>
 </Layout>

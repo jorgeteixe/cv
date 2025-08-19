@@ -1,0 +1,33 @@
+---
+interface Props {
+  skills: Array<{
+    name: string;
+    level?: string;
+    keywords: string[];
+  }>;
+}
+
+const { skills } = Astro.props;
+---
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+  {skills.map((skill) => (
+    <div>
+      <div class="flex items-center gap-2 mb-2">
+        <h3 class="font-semibold text-base">{skill.name}</h3>
+        {skill.level && (
+          <span class="text-xs text-gray-500 px-2 py-1 bg-gray-50 rounded">
+            {skill.level}
+          </span>
+        )}
+      </div>
+      <div class="flex flex-wrap gap-2">
+        {skill.keywords.map((keyword) => (
+          <span class="px-2 py-1 bg-gray-100 text-xs rounded">
+            {keyword}
+          </span>
+        ))}
+      </div>
+    </div>
+  ))}
+</div>

@@ -1,0 +1,266 @@
+basics:
+  name: Jorge Teixeira Crespo
+  label: Open Source Advocate & Cloud Engineer
+  image: https://github.com/jorgeteixe.png
+  email: hey@teixe.es
+  summary: |
+    Open Source Advocate and Cloud Engineer with a passion for fostering developer communities and building resilient systems. Currently working with Inditex's Open Source Program Office to bridge internal teams with the wider open source ecosystem. Experienced in cloud infrastructure, full-stack development, and leading technical communities.
+
+    President of GPUL, where I coordinate major tech conferences and hackathons while promoting open source culture in university. My technical background spans from cloud engineering with Kubernetes and AWS to full-stack development with modern web technologies.
+  location:
+    region: Galicia
+    countryCode: ES
+  profiles:
+    - network: LinkedIn
+      username: jorge-teixeira-crespo
+      url: https://linkedin.com/in/jorge-teixeira-crespo
+    - network: GitHub
+      username: jorgeteixe
+      url: https://github.com/jorgeteixe
+    - network: Website
+      url: https://teixe.es
+
+work:
+  - name: hiberus
+    position: Open Source Advocate
+    url: https://www.hiberus.com
+    startDate: 2025-03-01
+    summary: Working for the Open Source Program Office @ Inditex. Focused on fostering open source culture, engaging with communities, and supporting internal teams in contributing to and releasing open source projects.
+    highlights:
+      - Foster open source culture within the organization
+      - Engage with open source communities
+      - Support internal teams in contributing to open source projects
+      - Connect internal ecosystem with wider open source community
+    keywords:
+      - Open Source
+      - Community Engagement
+      - Developer Relations
+
+  - name: Grupo de Programadores y Usuarios de Linux
+    position: President
+    url: https://gpul.org
+    startDate: 2023-04-01
+    summary: President of GPUL, a non-profit that promotes open source and free software in the university and local tech community.
+    highlights:
+      - Coordinate and support tech community activities
+      - Host meetups with groups like CSS Working Group and TC39
+      - Collaborate in organizing major conferences like AtlánticaConf and LareiraConf
+      - Lead organization of HackUDC student hackathon
+      - Promote open source and free software adoption
+    keywords:
+      - Leadership
+      - Event Organization
+      - Community Management
+      - Non-profit
+
+  - name: Rundown Studio
+    position: Full Stack Developer
+    url: https://rundownstudio.app
+    startDate: 2024-04-01
+    endDate: 2025-03-01
+    summary: Developed features for an event planning and show management platform using React and Node with Firebase.
+    highlights:
+      - Developed event planning and show management platform features
+      - Implemented advanced time and timezone handling solutions
+      - Ensured precise synchronization for users across different regions
+      - Collaborated with founders to meet live production requirements
+    keywords:
+      - React.js
+      - Firebase
+      - Node.js
+      - JavaScript
+
+  - name: BizAway
+    position: Cloud Engineer
+    url: https://bizaway.com
+    startDate: 2021-03-01
+    endDate: 2024-04-01
+    summary: Contributing to the future of travel, leveraging modern technologies to build and maintain resilient systems.
+    highlights:
+      - Contributed to backend shift to Kubernetes-based system on AWS
+      - Constructed and maintained robust CI/CD pipelines
+      - Implemented Infrastructure as Code using Terraform
+      - Managed observability transition to ELK Stack
+      - Reinforced containerization efforts across the platform
+    keywords:
+      - Kubernetes
+      - AWS
+      - Terraform
+      - Docker
+      - ELK Stack
+      - CI/CD
+
+  - name: BD Electronics Ltd.
+    position: IT Support (Erasmus)
+    url: https://www.linkedin.com/company/bdelectronics/
+    startDate: 2018-05-01
+    endDate: 2018-07-01
+    summary: Managed internal IT support for an office of over 300 users during Erasmus internship in Malta.
+    highlights:
+      - Managed internal ticket support system for 300+ users
+      - Triaged tickets and provided user feedback
+      - Solved software and hardware problems
+      - Prepared empty floor with 70+ desks including network setup
+    keywords:
+      - Windows Server
+      - Active Directory
+      - Networking
+      - VoIP
+      - Help Desk
+
+education:
+  - institution: Universidade da Coruña
+    url: https://www.udc.es
+    area: Computer Engineering
+    studyType: Degree
+    startDate: 2020-09-01
+    endDate: 2024-06-01
+    score: 8.13
+
+  - institution: Universitatea de Vest din Timișoara
+    url: https://www.uvt.ro
+    area: Cybersecurity and Systems Security
+    studyType: Erasmus+ Exchange
+    startDate: 2024-02-01
+    endDate: 2024-07-01
+
+  - institution: IES Teis
+    url: https://www.edu.xunta.gal/centros/iesteis/
+    area: Multi-Platform Development
+    studyType: Higher Technician
+    startDate: 2018-09-01
+    endDate: 2020-06-01
+    score: 9.0 - With honors
+
+  - institution: IES Teis
+    url: https://www.edu.xunta.gal/centros/iesteis/
+    area: Microcomputer System and Networks
+    studyType: Technician
+    startDate: 2016-09-01
+    endDate: 2018-06-01
+    score: 9.4 - With honors, Erasmus+
+
+skills:
+  - name: Cloud & DevOps
+    level: Expert
+    keywords:
+      - Kubernetes
+      - AWS
+      - Docker
+      - Terraform
+      - CI/CD
+      - Infrastructure as Code
+
+  - name: Full-Stack Development
+    level: Advanced
+    keywords:
+      - React.js
+      - Node.js
+      - JavaScript
+      - TypeScript
+      - Next.js
+      - Astro
+
+  - name: Open Source & Community
+    level: Expert
+    keywords:
+      - Open Source Advocacy
+      - Developer Relations
+      - Community Management
+      - Event Organization
+
+  - name: Languages & Frameworks
+    level: Advanced
+    keywords:
+      - JavaScript
+      - TypeScript
+      - Python
+      - HTML/CSS
+      - TailwindCSS
+      - Go
+
+projects:
+  - name: Homelab
+    description: Raspberry Pi 5 homelab running self-hosted services with Docker Compose, Caddy, CoreDNS, and Tailscale
+    highlights:
+      - Automated deployments with Docker Compose and Just
+      - Reverse proxy with Caddy and Cloudflare certificates
+      - Local DNS via CoreDNS
+      - Secure remote access with Tailscale
+    keywords:
+      - Docker Compose
+      - Raspberry Pi
+      - Tailscale
+    date: 2025-06-01
+    url: https://github.com/jorgeteixe/homelab
+    type: infrastructure
+
+  - name: Pexegueiro
+    description: Digital companion to a printed book on Galician mills culture
+    highlights:
+      - Interactive maps and interviews
+      - High-resolution imagery showcase
+      - Cultural heritage preservation
+    keywords:
+      - Astro
+      - TailwindCSS
+      - JavaScript
+    date: 2024-01-01
+    url: https://github.com/jorgeteixe/pexegueiro
+    type: application
+
+  - name: HackUDC Management
+    description: Web app for managing participant check-ins, meal tracking, and event logistics
+    highlights:
+      - QR code-based verification system
+      - Real-time participant updates
+      - Event logistics management
+    keywords:
+      - Next.js
+      - Supabase
+      - React
+    date: 2025-02-01
+    url: https://github.com/jorgeteixe/hackudc-2024-management
+    type: application
+
+  - name: Next Level CXT
+    description: Completed labs using Terraform and Ansible for AWS resource management
+    highlights:
+      - Infrastructure as Code implementation
+      - AWS resource automation
+      - Configuration management
+    keywords:
+      - Terraform
+      - Ansible
+      - AWS
+    date: 2022-05-01
+    url: https://github.com/jorgeteixe/next-level-CXT
+    type: infrastructure
+
+  - name: Binance Alerts Telegram Bot
+    description: Bot sending real-time Telegram messages for cryptocurrency price changes
+    highlights:
+      - Real-time price monitoring
+      - Automated alert system
+      - Telegram integration
+    keywords:
+      - Python
+      - Telegram API
+      - Binance API
+    date: 2021-10-01
+    url: https://github.com/jorgeteixe/binance-alerts-telegram-bot
+    type: bot
+
+  - name: Milleiro
+    description: Full-stack web and native Android app for tracking bakery products
+    highlights:
+      - QR code scanning functionality
+      - Real-time product tracking
+      - Cross-platform solution
+    keywords:
+      - Node.js
+      - Angular
+      - Android
+    date: 2021-03-01
+    url: https://github.com/jorgeteixe/milleiro
+    type: application

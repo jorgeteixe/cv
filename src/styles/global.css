@@ -2,4 +2,16 @@
 
 body {
   font-family: 'Roboto Mono Variable', monospace;
+  line-height: 1.5;
+  color: #1f2937;
 }
+
+/* Show/hide elements based on screen vs print */
+.print-only {
+  display: none;
+}
+
+.screen-only {
+  display: inline;
+}
+

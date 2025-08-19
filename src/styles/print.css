@@ -1,0 +1,237 @@
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  html {
+    font-size: 10px;
+  }
+
+  body {
+    font-size: 10px;
+    line-height: 1.3;
+  }
+
+  @page {
+    margin: 0.4in 0.2in;
+    size: A4;
+  }
+
+  main {
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Header Styles */
+  header .flex {
+    flex-direction: row !important;
+    text-align: left !important;
+    justify-content: flex-start !important;
+    gap: 2rem !important;
+    margin-bottom: 1.5rem !important;
+    align-items: center !important;
+  }
+
+  header img {
+    width: 100px !important;
+    height: 100px !important;
+    flex-shrink: 0 !important;
+  }
+
+  header > div > div {
+    flex: 1 !important;
+    max-width: none !important;
+    min-width: 0 !important;
+  }
+
+  header h1 {
+    font-size: 20px !important;
+    margin-bottom: 6px !important;
+  }
+
+  header p {
+    font-size: 14px !important;
+    margin-bottom: 10px !important;
+  }
+
+  header .flex.flex-wrap {
+    justify-content: flex-start !important;
+    gap: 12px !important;
+    font-size: 12px !important;
+    flex-wrap: wrap !important;
+  }
+
+  /* Section Headers */
+  h2 {
+    font-size: 14px !important;
+    margin-bottom: 8px !important;
+    padding-bottom: 2px !important;
+  }
+
+  h3 {
+    font-size: 12px !important;
+    margin-bottom: 2px !important;
+  }
+
+  /* General Text */
+  p,
+  div,
+  span {
+    font-size: 9px !important;
+    line-height: 1.3 !important;
+  }
+
+  /* Experience Items */
+  .mb-6 {
+    margin-bottom: 1rem !important;
+  }
+
+  .mb-4 {
+    margin-bottom: 0.75rem !important;
+  }
+
+  .mb-3 {
+    margin-bottom: 0.5rem !important;
+  }
+
+  .mb-2 {
+    margin-bottom: 0.25rem !important;
+  }
+
+  .mb-1 {
+    margin-bottom: 0.125rem !important;
+  }
+
+  /* Skills and Tags */
+  .gap-2 {
+    gap: 4px !important;
+  }
+
+  .gap-4 {
+    gap: 8px !important;
+  }
+
+  .gap-6 {
+    gap: 12px !important;
+  }
+
+  .px-2 {
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+  }
+
+  .py-1 {
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+  }
+
+  /* Override backgrounds for print */
+  .bg-gray-100 {
+    background-color: transparent !important;
+    border: 1px solid #d1d5db !important;
+  }
+
+  .bg-gray-50 {
+    background-color: transparent !important;
+    border: 1px solid #d1d5db !important;
+  }
+
+  /* Text sizes for different elements */
+  .text-sm {
+    font-size: 10px !important;
+  }
+
+  .text-xs {
+    font-size: 9px !important;
+  }
+
+  .text-base {
+    font-size: 11px !important;
+  }
+
+  .text-lg {
+    font-size: 12px !important;
+  }
+
+  .text-xl {
+    font-size: 14px !important;
+  }
+
+  .text-2xl {
+    font-size: 16px !important;
+  }
+
+  .text-3xl {
+    font-size: 18px !important;
+  }
+
+  /* Links */
+  a {
+    text-decoration: none !important;
+    color: #000 !important;
+  }
+
+  /* Links - show URLs after link text */
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 8px;
+    color: #666;
+  }
+
+  /* For mailto links, show just the email address without mailto: prefix */
+  a[href^="mailto:"]:after {
+    content: " (" attr(data-email) ")";
+    font-size: 8px;
+    color: #666;
+  }
+
+  /* Hide anchor link URLs since they're not useful when printed */
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  /* Show/hide elements based on screen vs print */
+  .screen-only {
+    display: none !important;
+  }
+
+  .print-only {
+    display: inline !important;
+  }
+
+  /* Digital version link positioning */
+  header .print-only {
+    display: block !important;
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    font-size: 10px !important;
+    color: #666 !important;
+    text-align: right !important;
+  }
+
+  /* Sections */
+  section {
+    margin-bottom: 12px !important;
+  }
+
+  /* Lists */
+  ul {
+    margin-bottom: 8px !important;
+  }
+
+  li {
+    margin-top: 4px !important;
+  }
+
+  /* Grid layouts */
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+}

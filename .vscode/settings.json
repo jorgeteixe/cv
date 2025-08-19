@@ -9,5 +9,8 @@
   },
   "[astro]": {
     "editor.defaultFormatter": "astro-build.astro-vscode"
+  },
+  "yaml.schemas": {
+    "https://www.schemastore.org/yamllint.json": "/src/data/cv.yaml"
   }
 }
