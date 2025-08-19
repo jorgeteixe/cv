@@ -60,6 +60,8 @@ work:
         url: https://hackudc.gpul.org
       - label: AtlánticaConf
         url: https://atlanticaconf.com
+      - label: TC39 Meetup
+        url: https://www.youtube.com/watch?v=2zmIVBgbNag
 
   - name: Rundown Studio
     position: Full Stack Developer

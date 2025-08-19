@@ -173,18 +173,14 @@
     color: #000 !important;
   }
 
-  /* Links - show URLs after link text */
+  /* Links - hide URLs since PDF will be distributed electronically */
   a[href]:after {
-    content: " (" attr(href) ")";
-    font-size: 8px;
-    color: #666;
+    content: "";
   }
 
-  /* For mailto links, show just the email address without mailto: prefix */
+  /* For mailto links, hide URLs since PDF will be distributed electronically */
   a[href^="mailto:"]:after {
-    content: " (" attr(data-email) ")";
-    font-size: 8px;
-    color: #666;
+    content: "";
   }
 
   /* Hide anchor link URLs since they're not useful when printed */
