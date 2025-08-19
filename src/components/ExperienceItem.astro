@@ -9,6 +9,7 @@ interface Props {
     summary?: string;
     highlights?: string[];
     keywords?: string[];
+    links?: { label: string; url: string }[];
   };
 }
 
@@ -26,7 +27,24 @@ const period = `${formatDate(work.startDate)} - ${work.endDate ? formatDate(work
 <div class="mb-6">
   <div class="flex justify-between items-start mb-2">
     <div>
-      <h3 class="font-semibold text-lg">{work.position}</h3>
+      <div class="flex items-center gap-2">
+        <h3 class="font-semibold text-lg">{work.position}</h3>
+        {work.links && work.links.length > 0 && (
+          <div class="flex gap-1">
+            {work.links.map((link) => (
+              <a 
+                href={link.url} 
+                class="inline-flex items-center px-2 py-1 text-xs bg-blue-50 text-blue-700 hover:bg-blue-100 rounded border border-blue-200 transition-colors" 
+                target="_blank" 
+                rel="noopener"
+                title={link.label}
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+        )}
+      </div>
       <p class="text-gray-600 text-base">
         {work.url ? (
           <a href={work.url} class="text-blue-600 hover:underline" target="_blank" rel="noopener">

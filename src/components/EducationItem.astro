@@ -9,6 +9,7 @@ interface Props {
     endDate?: string;
     score?: string;
     courses?: string[];
+    links?: { label: string; url: string }[];
   };
 }
 
@@ -28,12 +29,29 @@ const period = education.endDate ?
 <div class="mb-4">
   <div class="flex justify-between items-start mb-1">
     <div class="flex-1">
-      <h3 class="font-semibold text-base leading-tight">
-        {education.studyType}{education.area && ` in ${education.area}`}
-        {education.score && (
-          <span class="ml-2 text-xs text-gray-500 font-normal">({education.score})</span>
+      <div class="flex items-center gap-2">
+        <h3 class="font-semibold text-base leading-tight">
+          {education.studyType}{education.area && ` in ${education.area}`}
+          {education.score && (
+            <span class="ml-2 text-xs text-gray-500 font-normal">({education.score})</span>
+          )}
+        </h3>
+        {education.links && education.links.length > 0 && (
+          <div class="flex gap-1">
+            {education.links.map((link) => (
+              <a 
+                href={link.url} 
+                class="inline-flex items-center px-2 py-1 text-xs bg-blue-50 text-blue-700 hover:bg-blue-100 rounded border border-blue-200 transition-colors" 
+                target="_blank" 
+                rel="noopener"
+                title={link.label}
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
         )}
-      </h3>
+      </div>
       <p class="text-gray-600 text-sm">
         {education.url ? (
           <a href={education.url} class="text-blue-600 hover:underline" target="_blank" rel="noopener">

@@ -35,6 +35,9 @@ work:
       - Open Source
       - Community Engagement
       - Developer Relations
+    links:
+      - label: InditexTech
+        url: https://github.com/InditexTech
 
   - name: Grupo de Programadores y Usuarios de Linux
     position: President
@@ -52,6 +55,11 @@ work:
       - Event Organization
       - Community Management
       - Non-profit
+    links:
+      - label: HackUDC
+        url: https://hackudc.gpul.org
+      - label: AtlánticaConf
+        url: https://atlanticaconf.com
 
   - name: Rundown Studio
     position: Full Stack Developer
@@ -69,6 +77,9 @@ work:
       - Firebase
       - Node.js
       - JavaScript
+    links:
+      - label: Release Notes
+        url: https://rundownstudio.app/blog/new-in-2-0/
 
   - name: BizAway
     position: Cloud Engineer
@@ -208,6 +219,9 @@ projects:
     date: 2024-01-01
     url: https://github.com/jorgeteixe/pexegueiro
     type: application
+    links:
+      - label: Live Site
+        url: https://pexegueiro.estudoslocais.org
 
   - name: HackUDC Management
     description: Web app for managing participant check-ins, meal tracking, and event logistics
@@ -222,6 +236,9 @@ projects:
     date: 2025-02-01
     url: https://github.com/jorgeteixe/hackudc-2024-management
     type: application
+    links:
+      - label: Demo Video
+        url: https://youtu.be/Z4itLbMdTYM?si=neLANC_XZtAaE1gf&t=9
 
   - name: Next Level CXT
     description: Completed labs using Terraform and Ansible for AWS resource management
