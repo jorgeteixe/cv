@@ -1,6 +1,6 @@
 <div align="center">
 
-# 📄 Curriculum Vitae as code - YAML, Astro and TailwindCSS
+# 📄 CV as code - YAML, Astro and TailwindCSS
 
 [![CV Demo](https://img.shields.io/badge/CV-Live%20Demo-blue?style=for-the-badge&logo=astro)](https://cv.teixe.es)
 [![GitHub License](https://img.shields.io/github/license/jorgeteixe/cv?style=for-the-badge)](LICENSE)
