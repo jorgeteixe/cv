@@ -1,10 +1,10 @@
 basics:
   name: Jorge Teixeira Crespo
-  label: Open Source Advocate & Cloud Engineer
+  label: Open Source & Cloud Engineer
   image: https://github.com/jorgeteixe.png
   email: hey@teixe.es
   summary: |
-    Open Source Advocate and Cloud Engineer with a passion for fostering developer communities and building resilient systems. Currently working with Inditex's Open Source Program Office to bridge internal teams with the wider open source ecosystem. Experienced in cloud infrastructure, full-stack development, and leading technical communities.
+    Open Source and Cloud Engineer with a passion for fostering developer communities and infrastructure. Currently working with Inditex's Open Source Program Office to bridge internal teams with the open source ecosystem. Experienced in cloud infrastructure, full-stack development, and leading technical communities.
 
     President of GPUL, where I coordinate major tech conferences and hackathons while promoting open source culture in university. My technical background spans from cloud engineering with Kubernetes and AWS to full-stack development with modern web technologies.
   location:
