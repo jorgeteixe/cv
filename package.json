@@ -11,7 +11,7 @@
   "dependencies": {
     "@fontsource-variable/roboto-mono": "^5.2.6",
     "@tailwindcss/vite": "^4.1.12",
-    "astro": "^5.13.2",
+    "astro": "^5.14.5",
     "tailwindcss": "^4.1.12",
     "yaml": "^2.8.1"
   }
