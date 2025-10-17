@@ -1,9 +1,21 @@
 @import "tailwindcss";
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Roboto Mono Variable', monospace;
   line-height: 1.5;
   color: #1f2937;
+  overflow-x: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Ensure all elements can break long words */
+* {
+  min-width: 0;
 }
 
 /* Show/hide elements based on screen vs print */

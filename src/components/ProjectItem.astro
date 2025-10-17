@@ -26,18 +26,18 @@ const formattedDate = project.date ? formatDate(project.date) : "";
 ---
 
 <div class="mb-4">
-  <div class="flex justify-between items-start mb-2">
-    <div class="flex items-center gap-2">
-      <h3 class="font-semibold text-base">
+  <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2 gap-1 sm:gap-0">
+    <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 flex-1 min-w-0">
+      <h3 class="font-semibold text-base break-words">
         {project.name}
       </h3>
       {(project.url || (project.links && project.links.length > 0)) && (
-        <div class="flex gap-1">
+        <div class="flex flex-wrap gap-1">
           {project.url && (
-            <a 
-              href={project.url} 
-              class="inline-flex items-center px-2 py-1 text-xs bg-blue-50 text-blue-700 hover:bg-blue-100 rounded border border-blue-200 transition-colors" 
-              target="_blank" 
+            <a
+              href={project.url}
+              class="inline-flex items-center px-2 py-1 text-xs bg-blue-50 text-blue-700 hover:bg-blue-100 rounded border border-blue-200 transition-colors"
+              target="_blank"
               rel="noopener"
               title="Repository"
             >
@@ -45,10 +45,10 @@ const formattedDate = project.date ? formatDate(project.date) : "";
             </a>
           )}
           {project.links && project.links.map((link) => (
-            <a 
-              href={link.url} 
-              class="inline-flex items-center px-2 py-1 text-xs bg-blue-50 text-blue-700 hover:bg-blue-100 rounded border border-blue-200 transition-colors" 
-              target="_blank" 
+            <a
+              href={link.url}
+              class="inline-flex items-center px-2 py-1 text-xs bg-blue-50 text-blue-700 hover:bg-blue-100 rounded border border-blue-200 transition-colors"
+              target="_blank"
               rel="noopener"
               title={link.label}
             >
@@ -59,7 +59,7 @@ const formattedDate = project.date ? formatDate(project.date) : "";
       )}
     </div>
     {formattedDate && (
-      <span class="text-xs text-gray-500 whitespace-nowrap ml-4">{formattedDate}</span>
+      <span class="text-xs text-gray-500 whitespace-nowrap sm:ml-4">{formattedDate}</span>
     )}
   </div>
   

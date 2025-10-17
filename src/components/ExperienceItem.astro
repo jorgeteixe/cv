@@ -25,17 +25,17 @@ const period = `${formatDate(work.startDate)} - ${work.endDate ? formatDate(work
 ---
 
 <div class="mb-6">
-  <div class="flex justify-between items-start mb-2">
-    <div>
-      <div class="flex items-center gap-2">
-        <h3 class="font-semibold text-lg">{work.position}</h3>
+  <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2 gap-1 sm:gap-0">
+    <div class="flex-1 min-w-0">
+      <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
+        <h3 class="font-semibold text-lg break-words">{work.position}</h3>
         {work.links && work.links.length > 0 && (
-          <div class="flex gap-1">
+          <div class="flex flex-wrap gap-1">
             {work.links.map((link) => (
-              <a 
-                href={link.url} 
-                class="inline-flex items-center px-2 py-1 text-xs bg-blue-50 text-blue-700 hover:bg-blue-100 rounded border border-blue-200 transition-colors" 
-                target="_blank" 
+              <a
+                href={link.url}
+                class="inline-flex items-center px-2 py-1 text-xs bg-blue-50 text-blue-700 hover:bg-blue-100 rounded border border-blue-200 transition-colors"
+                target="_blank"
                 rel="noopener"
                 title={link.label}
               >
@@ -45,9 +45,9 @@ const period = `${formatDate(work.startDate)} - ${work.endDate ? formatDate(work
           </div>
         )}
       </div>
-      <p class="text-gray-600 text-base">
+      <p class="text-gray-600 text-base break-words">
         {work.url ? (
-          <a href={work.url} class="text-blue-600 hover:underline" target="_blank" rel="noopener">
+          <a href={work.url} class="text-blue-600 hover:underline break-all" target="_blank" rel="noopener">
             {work.name}
           </a>
         ) : (
@@ -55,7 +55,7 @@ const period = `${formatDate(work.startDate)} - ${work.endDate ? formatDate(work
         )}
       </p>
     </div>
-    <span class="text-sm text-gray-500 whitespace-nowrap ml-4">{period}</span>
+    <span class="text-sm text-gray-500 whitespace-nowrap sm:ml-4">{period}</span>
   </div>
   
   {work.summary && (

@@ -57,19 +57,19 @@ const siteUrl = Astro.site?.toString();
     Digital version: {siteUrl}
   </div>
 
-  <div class="flex flex-col items-center text-center gap-6">
+  <div class="flex flex-col items-center text-center gap-4 md:gap-6">
     <img
       src={basics.image}
       alt={basics.name}
-      class="w-32 h-32 rounded-full object-cover border-2 border-gray-300"
+      class="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border-2 border-gray-300"
     />
 
-    <div class="flex-1">
-      <h1 class="text-3xl font-bold mb-2">{basics.name}</h1>
-      {basics.label && <p class="text-lg text-gray-500 mb-2">{basics.label}</p>}
-      <p class="text-lg text-gray-600 mb-4">{locationString}</p>
+    <div class="flex-1 w-full">
+      <h1 class="text-2xl md:text-3xl font-bold mb-2">{basics.name}</h1>
+      {basics.label && <p class="text-base md:text-lg text-gray-500 mb-2">{basics.label}</p>}
+      <p class="text-base md:text-lg text-gray-600 mb-3 md:mb-4">{locationString}</p>
 
-      <div class="flex flex-wrap justify-center gap-4 text-sm">
+      <div class="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 text-sm md:text-sm">
         {
           basics.email && (
             <a
