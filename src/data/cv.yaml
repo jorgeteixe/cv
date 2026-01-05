@@ -25,12 +25,16 @@ work:
     position: Open Source Advocate
     url: https://www.hiberus.com
     startDate: 2025-03-01
-    summary: Working for the Open Source Program Office @ Inditex. Focused on fostering open source culture, engaging with communities, and supporting internal teams in contributing to and releasing open source projects.
+    endDate: 2026-01-01
+    summary: |
+      Collaborator at Inditex's Open Source Program Office (OSPO).
+
+      Leading the strategy and execution of public open source initiatives, acting as a bridge between the organization's objectives and the global ecosystem of communities.
     highlights:
-      - Foster open source culture within the organization
-      - Engage with open source communities
-      - Support internal teams in contributing to open source projects
-      - Connect internal ecosystem with wider open source community
+      - Drive public initiatives and initiate strategic collaborations with entities and institutions in the technology sector.
+      - Responsible for the publication, governance, and maintenance of projects in Inditex's public GitHub organization, ensuring quality standards and sustainability.
+      - InnerSource & Open Source Culture. Fostering internal contribution culture, supporting technical teams in the process of releasing software and participating in third-party projects.
+      - Energizing relationships with external communities, positioning the organization as a relevant actor in the global open source ecosystem.
     keywords:
       - Open Source
       - Community Engagement
@@ -40,16 +44,21 @@ work:
         url: https://github.com/InditexTech
 
   - name: Grupo de Programadores y Usuarios de Linux
+    position: Vice President
+    url: https://gpul.org
+    startDate: 2025-11-01
+    summary: Vice President of GPUL. Supporting knowledge transfer and growth of the new board while focusing on new initiatives. We have secured the organization of GUADEC 2026 in A Coruña and guaranteed the survival of the "Best University Free Software Work Award". Additionally, I continue to oversee the growth of our main event, HackUDC, ensuring that free software remains a driving force in the local community.
+    keywords:
+      - Leadership
+      - Transfer of Knowledge
+      - Delegation of Responsibilities
+
+  - name: Grupo de Programadores y Usuarios de Linux
     position: President
     url: https://gpul.org
     startDate: 2023-04-01
-    summary: President of GPUL, a non-profit that promotes open source and free software in the university and local tech community.
-    highlights:
-      - Coordinate and support tech community activities
-      - Host meetups with groups like CSS Working Group and TC39
-      - Collaborate in organizing major conferences like AtlánticaConf and LareiraConf
-      - Lead organization of HackUDC student hackathon
-      - Promote open source and free software adoption
+    endDate: 2025-11-01
+    summary: President of GPUL, a non-profit that promotes free software and open source in the university and local tech community. I coordinated and supported a wide variety of activities, from meetups with groups like the CSS Working Group or TC39, to organizing conferences like AtlánticaConf or LareiraConf. Additionally, I led the organization of HackUDC, our university hackathon.
     keywords:
       - Leadership
       - Event Organization
