@@ -21,6 +21,16 @@ basics:
       url: https://teixe.es
 
 work:
+  - name: Grupo de Programadores y Usuarios de Linux
+    position: Vice President
+    url: https://gpul.org
+    startDate: 2025-11-01
+    summary: Vice President of GPUL. Supporting knowledge transfer and growth of the new board while focusing on new initiatives. We have secured the organization of GUADEC 2026 in A Coruña and guaranteed the survival of the "Best University Free Software Work Award". Additionally, I continue to oversee the growth of our main event, HackUDC, ensuring that free software remains a driving force in the local community.
+    keywords:
+      - Leadership
+      - Transfer of Knowledge
+      - Delegation of Responsibilities
+
   - name: hiberus
     position: Open Source Advocate
     url: https://www.hiberus.com
@@ -42,16 +52,6 @@ work:
     links:
       - label: InditexTech
         url: https://github.com/InditexTech
-
-  - name: Grupo de Programadores y Usuarios de Linux
-    position: Vice President
-    url: https://gpul.org
-    startDate: 2025-11-01
-    summary: Vice President of GPUL. Supporting knowledge transfer and growth of the new board while focusing on new initiatives. We have secured the organization of GUADEC 2026 in A Coruña and guaranteed the survival of the "Best University Free Software Work Award". Additionally, I continue to oversee the growth of our main event, HackUDC, ensuring that free software remains a driving force in the local community.
-    keywords:
-      - Leadership
-      - Transfer of Knowledge
-      - Delegation of Responsibilities
 
   - name: Grupo de Programadores y Usuarios de Linux
     position: President
