@@ -202,6 +202,26 @@ skills:
       - Go
 
 projects:
+  - name: Handdy
+    description: Published full-stack mobile app for hand motor recovery exercises and spatial awareness, built and shipped in a couple of weeks
+    highlights:
+      - Published to the App Store and Google Play
+      - Gamified hand recovery exercises
+      - Built with Hono RPC, Expo, and Astro in a monorepo
+      - Added streaks, rankings, and daily goals
+    keywords:
+      - Expo
+      - React Native
+      - TypeScript
+      - Hono
+      - Astro
+    date: 2026-01-20
+    url: https://github.com/jorgeteixe/handdy
+    type: application
+    links:
+      - label: Live Site
+        url: https://handdy.teixe.es
+
   - name: Homelab
     description: Raspberry Pi 5 homelab running self-hosted services with Docker Compose, Caddy, CoreDNS, and Tailscale
     highlights:
