@@ -5,6 +5,7 @@ interface Props {
     label?: string;
     image: string;
     email?: string;
+    phone?: string;
     url?: string;
     location: {
       city: string;
@@ -43,17 +44,17 @@ const countryNames: { [key: string]: string } = {
   RO: "Romania",
 };
 
-const flag = countryFlags[basics.location.countryCode] || "";
 const countryName =
   countryNames[basics.location.countryCode] || basics.location.countryCode;
-const locationString = `${basics.location.region}, ${countryName} ${flag}`;
+const locationString = `${basics.location.region}, ${countryName}`;
 
 const siteUrl = Astro.site?.toString();
+const phoneHref = basics.phone?.replace(/[^\d+]/g, "");
 ---
 
 <header class="mb-8 relative">
   <!-- Digital CV link - top right corner, print only -->
-  <div class="print-only absolute top-0 right-0 text-xs text-gray-600">
+  <div class="print-only print-digital-version absolute top-0 right-0 text-xs text-gray-600">
     Digital version: {siteUrl}
   </div>
 
@@ -71,11 +72,27 @@ const siteUrl = Astro.site?.toString();
 
       <div class="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 text-sm md:text-sm">
         {
+          basics.phone && (
+            <>
+              <button
+                type="button"
+                class="screen-only text-blue-600 hover:underline cursor-pointer"
+                data-copy-phone={basics.phone}
+                title="Copy phone number"
+              >
+                Phone number
+              </button>
+              <span class="print-only print-phone">Phone: {basics.phone}</span>
+            </>
+          )
+        }
+        {
           basics.email && (
             <a
               href={`mailto:${basics.email}`}
               class="text-blue-600 hover:underline"
               data-email={basics.email}
+              data-print-value={basics.email}
             >
               Email
             </a>
@@ -88,6 +105,7 @@ const siteUrl = Astro.site?.toString();
               class="text-blue-600 hover:underline"
               target="_blank"
               rel="noopener"
+              data-print-value={profile.url}
             >
               {profile.network}
             </a>
@@ -100,6 +118,7 @@ const siteUrl = Astro.site?.toString();
               class="text-blue-600 hover:underline"
               target="_blank"
               rel="noopener"
+              data-print-value={basics.url}
             >
               Website
             </a>
@@ -109,3 +128,23 @@ const siteUrl = Astro.site?.toString();
     </div>
   </div>
 </header>
+
+<script>
+  document.querySelectorAll("[data-copy-phone]").forEach((button) => {
+    button.addEventListener("click", async () => {
+      const phone = button.getAttribute("data-copy-phone");
+      if (!phone) return;
+
+      try {
+        await navigator.clipboard.writeText(phone);
+        const originalText = button.textContent;
+        button.textContent = "Copied";
+        window.setTimeout(() => {
+          button.textContent = originalText;
+        }, 1200);
+      } catch {
+        window.prompt("Copy phone number:", phone);
+      }
+    });
+  });
+</script>

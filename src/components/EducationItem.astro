@@ -61,6 +61,11 @@ const period = education.endDate ?
           education.institution
         )}
       </p>
+      {education.courses && education.courses.length > 0 && (
+        <p class="text-sm text-gray-700 mt-1">
+          Key coursework: {education.courses.join(" • ")}
+        </p>
+      )}
     </div>
     <span class="text-xs text-gray-500 whitespace-nowrap sm:ml-4">{period}</span>
   </div>
