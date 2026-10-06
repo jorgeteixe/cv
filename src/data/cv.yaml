@@ -1,6 +1,6 @@
 basics:
   name: Jorge Teixeira Crespo
-  label: Full-Stack & Cloud Engineer // Open Source Advocate @ GPUL
+  label: Senior+ AI Engineer @ Factorial & Event Organiser
   image: https://github.com/jorgeteixe.png
   email: hey@teixe.es
   phone: "+34 662 344 658"
@@ -22,6 +22,24 @@ basics:
       url: https://teixe.es
 
 work:
+  - name: Factorial
+    position: Senior+ AI Engineer
+    url: https://factorialhr.com
+    startDate: 2026-06-01
+    summary: |
+      Building Factorial Code, a developer portal and marketplace that lets Factorial interconnect with any other software, using the acquisition of YepCode as the cloud and connecting all the pieces into one product.
+    highlights:
+      - Full-stack product development spanning frontend and backend.
+      - Secure sandboxing for process execution within a Kubernetes infrastructure.
+      - Optimized the platform for agentic integration and application building.
+      - Integrated YepCode into Factorial's ecosystem as the cloud runtime behind Factorial Code.
+    keywords:
+      - AI Agents
+      - Kubernetes
+      - Sandboxing
+      - Full-Stack
+      - Developer Platform
+
   - name: Grupo de Programadores y Usuarios de Linux
     position: Vice President (Volunteering, Non-profit)
     url: https://gpul.org
